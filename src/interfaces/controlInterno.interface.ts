@@ -1,0 +1,27 @@
+export interface ControlInterno{
+    id?:number;
+    keyempleado:number;
+    codempleado:number;
+    item:number;
+    numproyecto:number;
+    keyunidad:number;
+    keycargo:number;
+    keysalario:number;
+    fechac?:Date;
+    razon:string;
+    detalle:string;
+    fechainicio?:Date;
+    fechaconclusion?:Date;
+    keybloqueo:number;
+    trabsabado:string;
+    fecha_conclusion_contrato?:Date;
+    keyedificio:number;
+    keyedificio2:number;
+    tipoafiliacion:string;
+    keyhorario:number;
+    lastupdate?:Date;
+    keytipoempleado:Number;
+    tiquea:Number;
+    keyproyecto:string;
+    keyusuariolastupdatedby:number;
+}

@@ -1,0 +1,22 @@
+export interface Empleados{
+    id?:number;
+    keyempleado:number;
+    nombre:string;
+    materno:string;
+    paterno:string;
+    lmilitar:string;
+    sexo:string;
+    celular:string;
+    fnac:Date;
+    lnac:string;
+    direc:string;
+    zona:string;
+    idgrado:number;
+    tdomicilio:string;
+    ecivil:string;
+    notas:string;
+    estado:string;
+    e_mail:string;
+    ncuenta:string;
+    nit:string;
+}

@@ -1,0 +1,18 @@
+{
+    "env": "test",
+    "dbConfig": {
+        "host": "172.19.0.2",
+        "user": "luis",
+        "password": "gampdatabase",
+        "database": "bdgamp"
+    },
+    "secretKey": "secretKey",
+    "log": {
+        "format": "dev",
+        "dir": "../logs"
+    },
+    "cors": {
+        "origin": true,
+        "credentials": true
+    }
+}
