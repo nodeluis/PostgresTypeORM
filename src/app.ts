@@ -16,11 +16,31 @@ import { dbConnection } from '@databases';
 import { Routes } from '@interfaces/routes.interface';
 import errorMiddleware from '@middlewares/error.middleware';
 import { logger, stream } from '@utils/logger';
+import { dbConfig } from './interfaces/db.interface';
+import session =require('express-session');
+const pgSession = require('connect-pg-simple')(session);
+
+
+declare module 'express-session' {
+  interface SessionData{
+    dataSession?:{
+      id?:number;
+      keyempleado?:number;
+      login?:string;
+      avatar?:String;
+      cite2?:string;
+      jefe?:boolean;
+    };
+  }
+}
+
+
 
 class App {
   public app: express.Application;
   public port: string | number;
   public env: string;
+  public conString: string;
 
   constructor(routes: Routes[]) {
     this.app = express();
@@ -48,6 +68,8 @@ class App {
   }
 
   private connectToDatabase() {
+    const { host, user, password, database }: dbConfig = config.get('dbConfig');
+    this.conString='pg://' + user + ':' + password + '@' + host + '/' + database;
     createConnection(dbConnection);
   }
 
@@ -60,6 +82,17 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
+    const secretKey: string = config.get('secretKey');
+    this.app.use(session({
+      store: new pgSession({
+        conString:this.conString,
+        tableName : 'session'   // Use another table-name than the default "session" one
+      }),
+      secret: secretKey,
+      resave: false,
+      saveUninitialized:false,
+      cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
+    }));
   }
 
   private initializeRoutes(routes: Routes[]) {

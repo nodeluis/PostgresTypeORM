@@ -4,7 +4,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 
 
 @Entity()
-export class UsuarioExternoEntityVD implements UsuarioExterno {
+export class EVUsuarioExternoEntity implements UsuarioExterno {
     @PrimaryGeneratedColumn()
     id: number;
 

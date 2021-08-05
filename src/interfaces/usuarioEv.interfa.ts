@@ -3,6 +3,7 @@ export interface UsuarioEv{
     keyempleado:number;
     login:string;
     pass:string;
+    jefe?:boolean;
     keyusuarioexterno:number;
     keyusuarioev:number;
     cite2:string;

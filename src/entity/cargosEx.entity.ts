@@ -4,7 +4,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 
 
 @Entity()
-export class CargosExEntityVD implements CargosEx {
+export class EVCargosExEntity implements CargosEx {
     @PrimaryGeneratedColumn()
     id: number;
 

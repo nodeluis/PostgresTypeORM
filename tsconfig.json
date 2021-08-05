@@ -33,7 +33,6 @@
       "@services/*": ["services/*"],
       "@utils/*": ["utils/*"],
       "@backsOracle/*": ["backsOracle/*"],
-      "@services/oracleBacksVD.service*": ["services/oracleBacksVD.service*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.json", ".env"],

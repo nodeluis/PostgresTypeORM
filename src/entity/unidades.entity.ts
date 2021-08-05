@@ -4,7 +4,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 
 
 @Entity()
-export class UnidadesEntityVD implements Unidades {
+export class EVUnidadesEntity implements Unidades {
     @PrimaryGeneratedColumn()
     id: number;
 

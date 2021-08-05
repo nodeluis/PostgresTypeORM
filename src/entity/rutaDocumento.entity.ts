@@ -4,7 +4,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 
 
 @Entity()
-export class RutaDocumentoEntityVD implements RutaDocumento {
+export class EVRutaDocumentoEntity implements RutaDocumento {
     @PrimaryGeneratedColumn()
     id: number;
 

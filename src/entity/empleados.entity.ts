@@ -4,7 +4,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 
 
 @Entity()
-export class EmpleadosEntityVD implements Empleados {
+export class EVEmpleadosEntity implements Empleados {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -23,6 +23,10 @@ export class EmpleadosEntityVD implements Empleados {
     @Column()
     @IsNotEmpty()
     paterno:string;
+
+    @Column()
+    @IsNotEmpty()
+    ci:string;
 
     @Column()
     @IsNotEmpty()
@@ -63,6 +67,10 @@ export class EmpleadosEntityVD implements Empleados {
     @Column()
     @IsNotEmpty()
     ecivil:string;
+
+    @Column()
+    @IsNotEmpty()
+    fingreso:Date;
 
     @Column()
     @IsNotEmpty()

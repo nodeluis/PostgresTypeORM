@@ -4,7 +4,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 
 
 @Entity()
-export class UsuarioEvEntityVD implements UsuarioEv {
+export class EVUsuarioEvEntity implements UsuarioEv {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -27,6 +27,10 @@ export class UsuarioEvEntityVD implements UsuarioEv {
     @Column()
     @IsNotEmpty()
     keyusuarioev:number;
+
+    @Column({default:false})
+    @IsNotEmpty()
+    jefe:boolean;
 
     @Column()
     @IsNotEmpty()

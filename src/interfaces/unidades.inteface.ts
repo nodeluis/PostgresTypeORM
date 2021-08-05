@@ -1,5 +1,5 @@
 export interface Unidades{
-    id:number;
+    id?:number;
     keyunidad:number;
     unidad:string;
     keyunidad_dep:number;

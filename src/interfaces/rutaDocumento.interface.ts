@@ -1,5 +1,5 @@
 export interface RutaDocumento{
-    id:number;
+    id?:number;
     keydocumento:number;
     keyusuarioor:number;
     keyusuariodest:number;

@@ -1,5 +1,6 @@
 import { Request } from 'express';
 import { User } from '@interfaces/users.interface';
+import {SessionData} from 'express-session';
 
 export interface DataStoredInToken {
   id: number;

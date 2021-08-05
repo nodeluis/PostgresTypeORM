@@ -4,7 +4,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 
 
 @Entity()
-export class ControlInternoEntityVD implements ControlInterno {
+export class EVControlInternoEntity implements ControlInterno {
     @PrimaryGeneratedColumn()
     id: number;
 

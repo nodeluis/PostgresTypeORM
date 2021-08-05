@@ -4,6 +4,7 @@ export interface Empleados{
     nombre:string;
     materno:string;
     paterno:string;
+    ci:string;
     lmilitar:string;
     sexo:string;
     celular:string;
@@ -14,6 +15,7 @@ export interface Empleados{
     idgrado:number;
     tdomicilio:string;
     ecivil:string;
+    fingreso:Date;
     notas:string;
     estado:string;
     e_mail:string;

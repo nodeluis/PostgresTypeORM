@@ -4,7 +4,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 
 
 @Entity()
-export class DocumentoEntityVD implements Documento {
+export class EVDocumentoEntity implements Documento {
     @PrimaryGeneratedColumn()
     id: number;
 
